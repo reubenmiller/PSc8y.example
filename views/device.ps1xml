@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <ViewDefinitions>
+
+        <!-- customDevice view -->
+        <View>
+            <Name>Default</Name>
+            <ViewSelectedBy>
+                <TypeName>application/vnd.com.nsn.cumulocity.customDevice+json</TypeName>
+                <TypeName>c8y.device.info</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Width>15</Width>
+                    </TableColumnHeader>
+
+                    <TableColumnHeader>
+                        <Width>35</Width>
+                    </TableColumnHeader>
+
+                    <TableColumnHeader>
+                        <Width>20</Width>
+                    </TableColumnHeader>
+
+                    <TableColumnHeader>
+                        <Width>20</Width>
+                    </TableColumnHeader>
+
+                    <TableColumnHeader>
+                        <Label>c8y_Firwmare.name</Label>
+                        <Width>50</Width>
+                    </TableColumnHeader>
+
+                    <TableColumnHeader>
+                        <Label>status</Label>
+                        <Width>15</Width>
+                    </TableColumnHeader>
+
+                    <TableColumnHeader>
+                        <Label>lastMessage</Label>
+                        <Width>25</Width>
+                    </TableColumnHeader>
+                    
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <!-- <Wrap /> -->
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>id</PropertyName>
+                            </TableColumnItem>
+
+                            <TableColumnItem>
+                                <PropertyName>name</PropertyName>
+                            </TableColumnItem>
+
+                            <TableColumnItem>
+                                <PropertyName>lastUpdated</PropertyName>
+                            </TableColumnItem>
+
+                            <TableColumnItem>
+                                <PropertyName>Type</PropertyName>
+                            </TableColumnItem>
+
+                            <TableColumnItem>
+                                <ScriptBlock>
+                                    if ($_.c8y_Firmware) {
+                                        $_.c8y_Firmware.name
+                                    } else {
+                                        ""
+                                    }
+                                </ScriptBlock>
+                            </TableColumnItem>
+
+                            <TableColumnItem>
+                                <ScriptBlock>$_.c8y_Availability.status</ScriptBlock>
+                            </TableColumnItem>
+
+                            <TableColumnItem>
+                                <ScriptBlock>$_.c8y_Availability.lastMessage</ScriptBlock>
+                            </TableColumnItem>
+
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>
+
