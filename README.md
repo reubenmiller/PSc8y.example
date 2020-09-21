@@ -1,10 +1,16 @@
-# Getting started
+# About
+
+This repository shows an example how to extend the [PSc8y](https://www.powershellgallery.com/packages/PSc8y) PowerShell module to create your own custom cmdlets/functions to interact with [CUMULOCITY IoT](https://www.softwareag.cloud/site/product/cumulocity-iot.html#/).
+
+See the [documentation](https://reubenmiller.github.io/go-c8y-cli/docs/1-powershell-installation/) for details about using the `PSc8y` module.
+
+## Getting started
 
 **Pre-requisites**
 
-These instructions require PowerShell to be already installed on your system. PowerShell (or pwsh) is available for Windows, Linux and MacOS. Please following the instructions for your operating system [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7).
+These instructions require PowerShell to be already installed. PowerShell (or pwsh) is available for Windows, Linux and MacOS. Please following the instructions for your operating system [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7).
 
-Powershell 7 is the current recommended powershell version.
+Powershell 7 is the current recommended version, though the instructions should also work for PowerShell 5.1 (on Windows only).
 
 
 1. Open a PowerShell (pwsh) console
