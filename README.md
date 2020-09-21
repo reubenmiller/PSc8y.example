@@ -21,16 +21,14 @@ Powershell 7 is the current recommended version, though the instructions should 
     powershell
     ```
 
-2. Clone the repository
+2. Clone the project
 
     ```sh
     git clone https://github.com/reubenmiller/PSc8y.example.git
     cd PSc8y.example
     ```
 
-3. Open a powershell command ()
-
-4. Import the PowerShell module
+3. Import the PowerShell module
 
     ```powershell
     Import-Module ./ -Force
@@ -38,13 +36,13 @@ Powershell 7 is the current recommended version, though the instructions should 
 
     **Note**: The `-Force` parameter is important when re-importing a module from a directory. If it is not used and the module has already been imported once, then any new functions or changes will not be loaded!
 
-5. Show a list of the commands in the module
+4. Show a list of the commands in the module
 
     ```powershell
     Get-Command -Module PSc8y.example
     ```
 
-6. Get help for a specific module
+5. Get help for a specific module
 
     ```powershell
     Get-Help Clear-OperationCollection -Full
