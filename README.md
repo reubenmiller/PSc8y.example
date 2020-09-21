@@ -1,13 +1,30 @@
 # Getting started
 
-1. Clone the repository
+**Pre-requisites**
+
+These instructions require PowerShell to be already installed on your system. PowerShell (or pwsh) is available for Windows, Linux and MacOS. Please following the instructions for your operating system [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7).
+
+Powershell 7 is the current recommended powershell version.
+
+
+1. Open a PowerShell (pwsh) console
+    ```sh
+    pwsh
+
+    # Or if you are using PowerShell 5.1 on windows
+    powershell
+    ```
+
+2. Clone the repository
 
     ```sh
     git clone https://github.com/reubenmiller/PSc8y.example.git
     cd PSc8y.example
     ```
 
-2. Import the PowerShell module
+3. Open a powershell command ()
+
+4. Import the PowerShell module
 
     ```powershell
     Import-Module ./ -Force
@@ -15,13 +32,13 @@
 
     **Note**: The `-Force` parameter is important when re-importing a module from a directory. If it is not used and the module has already been imported once, then any new functions or changes will not be loaded!
 
-3. Show a list of the commands in the module
+5. Show a list of the commands in the module
 
     ```powershell
     Get-Command -Module PSc8y.example
     ```
 
-4. Get help for a specific module
+6. Get help for a specific module
 
     ```powershell
     Get-Help Clear-OperationCollection -Full
