@@ -48,7 +48,7 @@ PowerShellVersion = '5.1'
 
 # Modules that must be imported into the global environment prior to importing this module
 RequiredModules = @(
-    "PSc8y"
+    @{ModuleName="PSc8y"; ModuleVersion="1.11.0"; GUID="9b4ebc35-bd61-4d07-a528-81c5733d0732"}
 )
 
 # Assemblies that must be loaded prior to importing this module
